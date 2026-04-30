@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"> <!-- Root HTML element with language set to English -->
+	<head>
+		<!-- Defines character encoding to support various languages and special characters -->
+		<meta charset="utf-8" />
+		<!-- Ensures the webpage is responsive on all devices by controlling the viewport scaling -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- SEO Meta Tags -->
+		<!-- Customise these with your actual details -->
+		<meta name="author" content="Holly Wilson & Prince Novotna" />
+		<meta name="description" content="A collaboratively designed news site, with a feed catared to users preferences." />
+		<meta name="keywords" content="SvelteKit, UI Design, Frontend Development, Web App" />
+
+		<!-- Sets the website favicon dynamically using SvelteKit's assets system -->
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<!-- Links to a global CSS file for consistent styling across all pages -->
+		<!--font heading-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
+		<!--font body-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="%sveltekit.assets%/styles/variables.css" />
+		<link rel="stylesheet" href="%sveltekit.assets%/styles/global.css" />
+
+		<!-- Default Website Title (Can be overridden in pages) -->
+		<title>Starter Kit</title>
+
+		<!-- SvelteKit Injected Head Content (Allows pages to override title) -->
+		%sveltekit.head%
+	</head>
+
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
