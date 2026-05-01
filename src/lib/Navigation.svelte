@@ -5,8 +5,10 @@
 
     const navigationItems = [
         { name: 'Home', path: '/' },
-        { name: 'Catalogue', path: '/catalogue/' },
-        { name: 'About', path: '/about/' }
+        { name: 'Graphic design', path: '/design/' },
+        { name: 'Programming', path: '/programming/' },
+        { name: 'Other art', path: '/art/' },
+        { name: 'About me', path: '/about/' }
     ];
 
     let isOpen = false;
@@ -44,7 +46,7 @@
 
 <style>
     .nav {
-        background-color: var(--color-background);
+        background-color: var(--color-primary);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -56,7 +58,7 @@
     .nav ul {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--space-xl);
+        gap: var(--space-sm);
         list-style: none;
         margin: 0 auto;
         padding: 10px;
@@ -65,9 +67,7 @@
     .nav-item {
         animation: fadeUp 0.4s ease forwards;
         background-color: var(--color-accent);
-        padding: 10px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 5px;
     }
 
     .nav-item:nth-child(1) { animation-delay: 0.2s; }

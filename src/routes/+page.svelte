@@ -24,7 +24,7 @@
 
 
 <svelte:head>
-    <title>Relevant</title>
+    <title>BATTER BAT</title>
 </svelte:head>
 
 
@@ -57,10 +57,10 @@
         <a class="browse-link" href="{resolve('/catalogue')}">Browse Full Catalogue →</a>
     </section>
 
-    <!-- About Teaser Section -->
+    <!-- About Teaser Section 
     <section class="about-teaser">
        
-    </section>
+    </section> -->
 
     <!-- Quote Modal -->
     <Modal
@@ -81,10 +81,7 @@
     /* Featured Section */
     .featured {
         padding: 0 var(--space-md);
-       /* background-image: url('/images/backgrounds/rice-texture.png');
-        background-size: 200px;
-        background-repeat: repeat; */
-        background-color: var(--color-background);
+        background: var(--gradient-brand);
     }
 
     .featured h2 {
@@ -123,19 +120,11 @@
         color: var(--color-accent);
     }
 
-    /* About Teaser */
+    /* About Teaser 
     .about-teaser {
         text-align: center;
         padding: var(--space-lg) var(--space-md);
         background-color: var(--color-background);
-       /* border-top: var(--border-default);
-       /* background: linear-gradient(to top, var(--color-surface), transparent);
-        background-image: url('/images/backgrounds/scroll-teaser.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-blend-mode: overlay; */
-        background-color: var(--color-background);
-    }
+    }*/
 
 </style>

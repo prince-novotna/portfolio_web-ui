@@ -7,16 +7,19 @@
     .footer {
         width: 100%;
         padding: var(--space-md);
-        text-align: center;
-        font-family: var(--font-body);
-        font-size: var(--font-sm);
-        color: var(--text-tertiary);
-        background-color: var(--color-surface);
-       /* border-top: var(--border-default); */
+        
+        background-color: var(--color-primary);
         box-shadow: var(--shadow-sm);
         position: relative;
         z-index: 10;
         animation: fadeInFooter var(--transition-slow) ease-in-out;
+    }
+
+    .footer p {
+        text-align: center;
+        font-family: var(--font-body);
+        font-size: var(--font-sm);
+        color: var(--text-contrast);
     }
 
     .footer::before {

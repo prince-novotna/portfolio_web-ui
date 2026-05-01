@@ -22,7 +22,7 @@
 
 <style>
     #layout-container {
-        background-color: var(--color-background);
+        background: var(--gradient-brand);
         color: var(--text-primary);
         font-family: var(--font-body);
     }
@@ -45,7 +45,7 @@
         bottom: 0;
         min-height: 100%;
         width: 100%;
-        background-color: var(--color-background);;
+        background: var(--gradient-brand);
         opacity: 0.66;
         z-index: -1;
     }

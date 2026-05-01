@@ -7,25 +7,25 @@
 :root {
     /* ========== Colour Palette ========== */
     /* Primary Earth-Inspired Colours */
-    --color-primary: #4e3643;    /* Stone (primary UI colour) */
-    --color-secondary: #b5a4b5;  /* Sand (backgrounds, inputs) */
-    --color-tertiary: #b7b7a4;   /* Clay (surface neutral) */
+    --color-primary: #1a1a1a;    /* black */
+    --color-secondary: #530306;  /* dark red */
+    --color-tertiary: #b83a2e;   /* ligth red*/
 
     /* Accent & Feedback Colours */
-    --color-accent:  #a9868c; /* #588157;      Moss Green (buttons, links) */
-    --color-highlight: #4e3643; /*#f4a261;   Warm Orange (attention, highlights) */
+    --color-accent:  #008081;    /* turquoise (buttons, links) */
+    --color-highlight: #c7bdbb;  /* grey (attention, highlights) */
     --color-success: #b5a4b5;    /* Soft Jade */
     --color-warning: #f2cc8f;    /* Honey Beige */
     --color-error: #e76f51;      /* Terracotta Red */
 
     /* Text colours */
-    --text-primary: #3c394e;  /* #1e1e1e;       Main text */
-    --text-secondary: #444444;   /* UI, subtitles */
-    --text-tertiary: #777777;    /* Placeholder or muted text */
-    --text-contrast: #ffffff;    /* Light text on dark backgrounds */
+    --text-primary: #1a1a1a;  /* #1e1e1e;       Main text */
+    --text-secondary: #530306;   /* UI, subtitles */
+    --text-tertiary: #b83a2e;    /* Placeholder or muted text */
+    --text-contrast: #c7bdbb;    /* Light text on dark backgrounds */
 
     /* Backgrounds & Surfaces */
-    --color-background: #eadfdb;  /*#fefae0;  Light parchment background */
+    --color-background: #c7bdbb;  /* grey background */
     --color-surface: #b5a4b4; /*#f5f5f0;     Panels, cards */
     /*--color-border: #dcdccf;     /* Subtle earthy border */
     --color-overlay: rgba(0, 0, 0, 0.25);
@@ -42,15 +42,13 @@
 
     /* Gradient (for headers, accents, or transitions) */
     --gradient-brand: linear-gradient(
-        90deg,
-        var(--color-primary),
-        var(--color-accent),
-        var(--color-success),
-        var(--color-highlight)
+        180deg,
+        var(--color-tertiary),
+        var(--color-secondary)
     );
 
     /* Header font colour */
-    --color-heading-title: #4e3643;
+    --color-heading-title: #c7bdbb;
 
     /* Shadows – natural and soft */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);

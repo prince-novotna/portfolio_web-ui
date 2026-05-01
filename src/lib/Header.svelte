@@ -10,13 +10,9 @@
             <a href=https://www.facebook.com><img src={asset("/images/header/facebook_logo.png")} alt="Facebook logo" /></a>
             <a href=https://www.x.com><img src={asset("/images/header/twitter_logo.png")} alt="Twitter logo" /></a>
         </div>
-
-        <div class="corner-right">
-            <img src={asset("/images/header/star.png")} alt="doodled star" />
-        </div>
        
         <div class="logo">
-            <h1>RELEVANT</h1>
+            <h1>BATTER BAT</h1>
         </div>
     </div>
     
@@ -29,10 +25,7 @@
         display: block;
         justify-content: space-between;
         align-items: center;
-       /* padding: 0 var(--space-lg);*/
-        background-color: var(--color-surface);
-        /*box-shadow: var(--shadow-md);*/
-       /* border-bottom: var(--border-default); */
+        background-color: var(--color-primary);
         position: relative;
         z-index: 100;
     }
@@ -53,7 +46,7 @@
         animation: fadeInTitle 0.6s ease forwards;
     }
 
-    .corner-right {
+    /* .corner-right {
         display: inline-block;
         right: 0;
         max-width: 100px;
@@ -67,7 +60,7 @@
         height: auto;
         width: auto;
         animation: fadeInTitle 0.6s ease forwards;
-    }
+    } */
 
     .logo-area {
         display: block;
