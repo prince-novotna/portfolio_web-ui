@@ -6,13 +6,18 @@
 
 <header class="header">
     <div class="logo-area">
-        <div class="social-area">
+        <!--<div class="social-area">
             <a href=https://www.facebook.com><img src={asset("/images/header/facebook_logo.png")} alt="Facebook logo" /></a>
             <a href=https://www.x.com><img src={asset("/images/header/twitter_logo.png")} alt="Twitter logo" /></a>
-        </div>
+        </div>-->
        
         <div class="logo">
-            <h1>BATTER BAT</h1>
+            <div class ="logotype">
+                <h1>BATTER</h1>
+                <h1>BAT</h1>
+            </div>
+            
+            <img src={asset("/images/header/bat_mascot.png")} alt="Illustartion of a black bat mascot." />
         </div>
     </div>
     
@@ -66,22 +71,42 @@
         display: block;
         align-items: center;
         gap: var(--space-sm);
-        font-family: var(--font-heading);
+        font-family: var(--font-logotype);
+        padding-top: 20px;
+        height: 15em;
     }
 
     .logo-area h1 {
         margin: 20px;
         margin-top: 0px;
         margin-bottom: 0px;
-        text-align: center;
+        text-align: left;
         font-size: var(--font-logo);
-        font-weight: 700;
+        letter-spacing: 0.05em;
         background: var(--color-heading-title);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        line-height:2;
+        line-height: 1;
         animation: fadeInTitle 0.6s ease forwards;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        float: center;
+        position: relative;
+    }
+
+    .logo img {
+        width: 40%;
+        height: auto;
+        animation: fadeInTitle 0.6s ease forwards;
+        object-fit: cover; 
+        object-position: 40px -120px;
+        margin-left: -100px;
     }
 
     @keyframes fadeInTitle {

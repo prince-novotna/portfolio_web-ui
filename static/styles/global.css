@@ -34,7 +34,7 @@ section:not(:last-child) {
 
 /* === Typography === */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+    font-family: var(--font-logotype);
     color: var(--text-primary);
     margin-top: var(--space-md);
     margin-bottom: var(--space-sm);

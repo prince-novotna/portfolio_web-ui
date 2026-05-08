@@ -63,7 +63,9 @@
     --border-active: 2px solid var(--color-primary);
 
     /* ========== Typography ========== */
-    --font-heading:  'Special Gothic Expanded One', sans-serif; /*'Playfair Display', 'Crimson Pro', serif;*/
+    /*--font-heading:  'Special Gothic Expanded One', sans-serif; /*'Playfair Display', 'Crimson Pro', serif;*/
+    --font-logotype: 'Bungee', sans-serif;
+    --font-heading: 'New Rocker', sans-serif;
     --font-body: "Roboto Mono", monospace; /*'Noto Sans', 'Inter', sans-serif;*/
     --font-quote: 'Merriweather', Georgia, serif;
     --font-code: 'JetBrains Mono', 'Fira Code', monospace;
@@ -75,7 +77,7 @@
     --font-lg: 1.25rem;
     --font-xl: 1.5rem;
     --font-xxl: 2rem;
-    --font-logo: 4rem;
+    --font-logo: 5rem;
 
     /* ========== Radius, Spacing & Motion ========== */
     --radius-sm: 4px;

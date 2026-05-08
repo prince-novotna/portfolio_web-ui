@@ -62,6 +62,7 @@
         list-style: none;
         margin: 0 auto;
         padding: 10px;
+        border-top: 3px solid var(--color-highlight);
     }
 
     .nav-item {
@@ -93,11 +94,11 @@
 
     .nav a:hover,
     .nav a:focus {
-        color: var(--color-secondary);
+        color: var(--color-highlight);
     }
 
     .nav a.active {
-        color: var(--color-primary);
+        color: var(--color-tertiary);
     }
 
     .nav a.active::after {
@@ -112,7 +113,7 @@
         font-size: var(--font-xl);
         background: none;
         border: none;
-        color: var(--text-primary);
+        color: var(--text-contrast);
         padding: var(--space-xs);
         cursor: pointer;
         margin-left: auto;
