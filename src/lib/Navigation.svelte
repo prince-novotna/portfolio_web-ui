@@ -113,7 +113,7 @@
         font-size: var(--font-xl);
         background: none;
         border: none;
-        color: var(--text-contrast);
+        color: var(--text-secondary);
         padding: var(--space-xs);
         cursor: pointer;
         margin-left: auto;

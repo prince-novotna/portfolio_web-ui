@@ -20,7 +20,7 @@
 
     /* Text colours */
     --text-primary: #1a1a1a;  /* #1e1e1e;       Main text */
-    --text-secondary: #530306;   /* UI, subtitles */
+    --text-secondary: #008081;   /* UI, subtitles */
     --text-tertiary: #b83a2e;    /* Placeholder or muted text */
     --text-contrast: #c7bdbb;    /* Light text on dark backgrounds */
 
@@ -76,7 +76,7 @@
     --font-base: 1rem;
     --font-lg: 1.25rem;
     --font-xl: 1.5rem;
-    --font-xxl: 2rem;
+    --font-xxl: 4rem;
     --font-logo: 5rem;
 
     /* ========== Radius, Spacing & Motion ========== */

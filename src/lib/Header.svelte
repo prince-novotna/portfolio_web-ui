@@ -74,6 +74,7 @@
         font-family: var(--font-logotype);
         padding-top: 20px;
         height: 15em;
+        overflow: hidden;
     }
 
     .logo-area h1 {
@@ -98,15 +99,20 @@
         justify-content: center;
         float: center;
         position: relative;
+        border-bottom: 3px solid var(--color-highlight);
     }
 
     .logo img {
-        width: 40%;
-        height: auto;
+        width: 35%;
+        min-width: 35%;
+        height: 35%;
+        min-height: 35%;
+        position: relative;
+        object-fit: cover;
+        object-position: 1em -6em;/*40px -120px;*/
+        margin-left: -180px;
         animation: fadeInTitle 0.6s ease forwards;
-        object-fit: cover; 
-        object-position: 40px -120px;
-        margin-left: -100px;
+        z-index: -1;
     }
 
     @keyframes fadeInTitle {
@@ -132,8 +138,18 @@
             width: 100%;
         }
 
+        .logo {
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 80%;
+            min-width: 80%;
+            right: 10%;
+        }
+
         .logo-area h1 {
-            font-size: var(--font-lg);
+            font-size: var(--font-xxl);
         }
     }
 </style>
