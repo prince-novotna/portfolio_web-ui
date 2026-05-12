@@ -10,32 +10,41 @@
 
 
 <section class="intro section-hero">
-    <h1>About Relevant</h1>
+    <h1>About me</h1>
     <p>
-        Relevant was developed in the hopes of making a news site that appeals to a
-        more diverse demographic. In a world full of fake news, boring news, stupid news, relevant
-        flips the pre-exisiting news site standards on their heads! In the first two years
-        since starting the site we have won a multitude of awards, infact our work
-        has been so influential that we were nominated for the nobel journalism prize for 2026!
-        <br>
-        <br>
-        Our team is ever expanding as we have stayed dedicated to our goal to spread our journalism
-        across every age! We want to bring back whimsy to journalism, get people excited to 
-        read the news and be informed. 
-        <br>
-        <br>
-        <br>
-        <i>"Damn..they're so much better than us"</i> -New York Times
-        <br>
-        <br>
-        <i>"I could never be her.."</i> -BBC news
-        <br>
-        <br>
-        <i>"We're jobless and it's your fault. You're too good."</i> -Buzzfeed(rip)
+        Hi, I'm Prince! <br>
+        I'm an artist based in Ireland, specialising in graphic design, print design and character design.
+        I've also tried my hand at programming (namely C++, HTML, CSS and Javascript) and 3D modelling. <br>
+        I'm currently a student in <i>Interactive Digital Arts and Design</i>. <br>
+        I'd love to work with you!
     </p>
+    <br>
+    <br>
+
+    <h2>Follow me on social media!</h2>
+    <!--links would be replaced by ones to a specific account-->
+    <div class="social-media">
+        <a class="social-button" href="https://www.x.com">
+            <button type="button" aria-label="Open batter bat twitter account">
+                <img src={asset("/images/about/twitter_logo.png")} alt="Twitter logo"/>
+            </button>
+        </a>
+
+        <a class="social-button" href="https://www.tumblr.com">
+            <button type="button" aria-label="Open batter bat tumblr account">
+                <img src={asset("/images/about/tumblr_logo.png")} alt="Tumblr logo"/>
+            </button>
+        </a>
+
+        <a class="social-button" href="https://www.instagram.com">
+            <button type="button" aria-label="Open batter bat instagram account">
+                <img src={asset("/images/about/instagram_logo.png")} alt="Instagram logo"/>
+            </button>
+        </a>
+    </div>
 </section>
 
-<section class="creators">
+<!--<section class="creators">
     <h2>The Creators</h2>
     <div class="grid">
         <figure>
@@ -58,15 +67,14 @@
 
         <p>I think perchance, maybe I might have read the news one time when I was five, so yeah I'm extremely qualified.</p>
     </div>
-</section>
+</section>-->
 
 <style>
     section {
-        margin-bottom: var(--space-xl);
+        margin-bottom: var(--space-xs);
         padding: var(--space-lg) var(--space-md);
-        background-color: var(--color-background);
+        background: var(--gradient-brand);
         border-radius: var(--radius-md);
-        /*box-shadow: var(--shadow-sm);*/
         animation: fadeIn 0.6s ease-in;
     }
 
@@ -77,6 +85,7 @@
         margin-bottom: var(--space-sm);
         text-align: center;
         position: relative;
+        text-shadow: 0px 0px 4px var(--text-contrast);
     }
 
     section h2::after {
@@ -85,7 +94,6 @@
         height: 2px;
         width: 60px;
         margin: var(--space-xs) auto 0 auto;
-        background: var(--color-accent);
         border-radius: var(--radius-sm);
     }
 
@@ -94,7 +102,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-blend-mode: overlay;
-        background-color: var(--color-background);
+        background: var(--gradient-brand);
     }
 
     .creators {
@@ -106,11 +114,29 @@
 
     p {
         font-size: var(--font-base);
-        color: var(--text-secondary);
+        color: var(--text-contrast);
         max-width: 700px;
         margin: 0 auto var(--space-md);
         text-align: center;
         line-height: 1.8;
+    }
+
+    .social-button img {
+        height: 8vh;
+    }
+
+    .social-button button {
+        padding: var(--space-xs) var(--space-xs);
+        background-color: var(--color-accent);
+        border-radius: var(--radius-md);
+        transition: background-color var(--transition-fast), transform var(--transition-fast);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-sm);
     }
 
     .grid {
@@ -169,6 +195,10 @@
         .grid {
             grid-template-columns: 1fr;
         }
+
+        .social-button img {
+        height: 4vh;
+    }
 
         section h1, section h2 {
             font-size: var(--font-lg);

@@ -145,7 +145,8 @@
         .logo img {
             width: 80%;
             min-width: 80%;
-            right: 10%;
+            right: 20%;
+            object-position: 1em -2em;
         }
 
         .logo-area h1 {

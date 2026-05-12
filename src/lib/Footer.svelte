@@ -1,5 +1,5 @@
 <footer class="footer">
-    <p>&copy; 2026 Relevant</p>
+    <p>&copy; 2026 Batter Bat</p>
 </footer>
 
 

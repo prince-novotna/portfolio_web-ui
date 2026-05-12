@@ -33,7 +33,7 @@
 
     <!-- Featured Catalogue Section -->
     <section class="featured">
-        <h2>Top Articles</h2>
+        <h2>Artist, designer, beginner programmer</h2>
         <div class="card-grid">
             {#each featuredItems as item, index}
                 <button
@@ -54,6 +54,9 @@
                 </button>
             {/each}
         </div>
+
+        <button class="contact-button">Contact me!</button>
+
         <a class="browse-link" href="{resolve('/catalogue')}">Browse Full Catalogue →</a>
     </section>
 
@@ -109,6 +112,19 @@
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: var(--space-lg);
         margin-bottom: var(--space-md);
+    }
+
+    .contact-button {
+        margin-top: var(--space-md);
+        padding: var(--space-sm) var(--space-lg);
+        background-color: var(--color-accent);
+        color: var(--text-contrast);
+        text-decoration: none;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: var(--font-lg);
+        transition: background-color var(--transition-fast), transform var(--transition-fast);
+        box-shadow: var(--shadow-sm);
     }
 
     .browse-link {
