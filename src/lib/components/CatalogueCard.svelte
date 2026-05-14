@@ -4,9 +4,9 @@
     export let title = 'Untitled';
     export let description = 'No description provided.';
     export let image = '/images/catalogue/placeholder.jpg';
-    export let category = 'Uncategorised';
-    /** @type {string | any[]} */
-    export let tags = [];
+    /*export let category = 'Uncategorised';
+    /** @type {string | any[]} 
+    export let tags = [];*/
     export let animationDelay = 0;
     export let altText = "image";
     export let article = 'Blank text';
@@ -23,8 +23,8 @@
     </div>
 
     <div class="content">
-        <h2>{title}</h2>
-        <p class="category">{category}</p>
+        <p>{title}</p>
+        <!--<p class="category">{category}</p>
 
         <p class="description">
             {#if expanded || !isLong}
@@ -52,7 +52,7 @@
                     <span class="tag">{tag}</span>
                 {/each}
             </div>
-        {/if}
+        {/if}-->
     </div>
 </article>
 
@@ -61,15 +61,19 @@
     .card {
         display: flex;
         flex-direction: column;
-        background: var(--color-surface);
+        background: var(--color-highlight);
         border-radius: var(--radius-md);
         box-shadow: var(--shadow-md);
-        overflow: hidden;
-        height: 600px;
+        height: auto;
+        padding: 5px;
         transition: transform var(--transition-fast), box-shadow var(--transition-fast);
         opacity: 0;
         transform: translateY(20px);
         animation: fadeInSlide 0.8s ease forwards;
+    }
+
+    .card img {
+        object-fit: contain;
     }
 
     .card:hover {
@@ -83,7 +87,7 @@
         justify-content: center;
         background-color: var(--color-background);
         overflow: hidden;
-        height: 320px;
+        height: auto;
     }
 
     .image-wrapper img {
@@ -99,9 +103,9 @@
         gap: var(--space-sm);
     }
 
-    .content h2 {
-        font-family: var(--font-heading);
-        font-size: var(--font-lg);
+    .content p {
+        font-family: var(--font-body);
+        font-size: var(--font-base);
         margin: 0;
         color: var(--text-primary);
     }

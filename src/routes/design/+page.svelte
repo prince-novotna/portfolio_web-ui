@@ -10,25 +10,26 @@
 	let sortBy = 'title';
 
 
-	function resetFilters() {
+	/*function resetFilters() {
 		search = '';
 		selectedTag = 'all';
 		sortBy = 'title';
-	}
+	}*/
 
 
 	$: isFiltered = search || selectedTag !== 'all' || sortBy !== 'title';
 
 	// Reactive filtered + sorted catalogue
 	$: filteredCatalogue = $catalogue
-		.filter(item => {
+		/*.filter(item => {
 			const matchesTag = selectedTag === 'all' || item.tags?.includes(selectedTag);
 			const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase()) ||
 								  item.description.toLowerCase().includes(search.toLowerCase());
 			return matchesTag && matchesSearch;
-		})
+		})*/
+        .filter(item => item.category === 'design')
 		.sort((a, b) => {
-			if (sortBy === 'title') return a.title.localeCompare(b.title);
+			if (sortBy === 'id') return a.id.localeCompare(b.id);
 			if (sortBy === 'category') return a.category.localeCompare(b.category);
 			return 0;
 		});
@@ -39,16 +40,16 @@
 
 
 <svelte:head>
-    <title>Catalogue | Starter Kit</title>
+    <title>Graphic & Print design</title>
 </svelte:head>
 
 
 <section class="catalogue-wrapper">
 	<div class="catalogue-heading-wrapper">
-		<h1 class="catalogue-heading">Catalogue</h1>
+		<h1 class="catalogue-heading">Graphic & Print design</h1>
 	</div>
 
-	<div class="controls">
+	<!--<div class="controls">
 		<label class="search-input">
 			<span role="img" aria-label="Search">🔍</span>
 			<input
@@ -82,15 +83,14 @@
 				✖ Reset
 			</button>
 		{/if}
-	</div>
+	</div>-->
 
     <div class="grid" class:narrow={filteredCatalogue.length <= 2}>
-		{#if filteredCatalogue.length > 0}
             {#each filteredCatalogue as item, index (animationKey + '-' + item.id)}
                 <button
 					type="button"
 					class="card-button"
-					on:click={() => goto(resolve('/catalogue/[title]', { title: item.title }))}
+					on:click={() => goto(resolve('/design/[title]', { title: item.title }))}
 					aria-label={`View details for ${item.title}`}
 				>
                     <CatalogueCard
@@ -104,9 +104,6 @@
                     />
                 </button>
             {/each}
-        {:else}
-            <p class="empty">No items match your search or filter.</p>
-        {/if}
 	</div>
 </section>
 
@@ -196,8 +193,9 @@
 
     .grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         justify-content: center;
+        align-items: flex-start;
 		gap: var(--space-lg);
         padding: 0 var(--space-lg);
         padding-bottom: 50px;

@@ -17,7 +17,7 @@
 	
 	$: animationKey = `${item.title}-${relatedItems.map(i => i.title).join(',')}`;
 
-	$: { // Look up related items
+	/*$: { // Look up related items
 		const itemTags = new Set((item.tags || []).map(tag => tag.toLowerCase()));
 
 		relatedItems = $catalogue.filter(other => 
@@ -31,7 +31,7 @@
 			// Return true if they share the same category or any tags
 			return sameCategory || sharedTags;
 		}).slice(0, 3); // Show max 3 related
-	}
+	}*/
 </script>
 
 
