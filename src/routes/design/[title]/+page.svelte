@@ -36,7 +36,7 @@
 
 
 <svelte:head>
-	<title>{item.title} | Catalogue</title>
+	<title>{item.title} | Batter Bat</title>
 </svelte:head>
 
 
@@ -48,7 +48,7 @@
 		<p class="category">{item.category}</p>
 		<p class="description">{item.description}</p>
 
-		<section class="article">
+		<!--<section class="article">
 			{#each item.article as segment}
 				<p class="segment">{segment}</p>
 			{/each}
@@ -60,7 +60,7 @@
 					<li class="tag">{tag}</li>
 				{/each}
 			</ul>
-		{/if}
+		{/if}-->
 	</div>
 </section>
 
@@ -73,7 +73,7 @@
 					<button
 						type="button"
 						class="card-button"
-						on:click={() => goto(resolve('/programming/[title]', { title: item.title }))}
+						on:click={() => goto(resolve('/design/[title]', { title: item.title }))}
 						aria-label={`View details for ${item.title}`}
 					>
 						<CatalogueCard
@@ -81,9 +81,9 @@
 							description={item.description}
 							image={item.image}
 							category={item.category}
-							tags={item.tags}
+							/*tags={item.tags}*/
                         	animationDelay={index * 100}
-							article={item.article}
+							/*article={item.article}*/
 						/>
 					</button>
 				{/each}
@@ -102,7 +102,7 @@
 		align-items: flex-start;
         background-size: 200px;
         background-repeat: repeat;
-        background-color: var(--color-background);
+        background-color: var(--gradient-brand);
 	}
 	
 	.detail-content {
@@ -117,15 +117,13 @@
 
 	.hero-image {
 		width: 100%;
-		max-height: 350px; /* Slightly smaller to reduce whitespace */
-		object-fit: cover;
 		border-radius: var(--radius-lg);
 		margin-bottom: var(--space-md);
 	}
 
 	.detail-content h1 {
 		margin: 0; /* Remove default margins */
-		font-size: var(--font-xxl);
+		font-size: var(--font-xl);
 		line-height: 1.2;
 	}
 
@@ -140,37 +138,38 @@
 	.description {
 		margin: 0; /* Remove extra margins */
 		line-height: 1.65;
+		color: var(--text-contrast);
 	}
 
-	.article {
+	/*.article {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto auto;
 		gap: 1em;
-	}
+	}*/
 
 	.segment {
 		list-style: none;
 	}
 
-	.tags {
+	/*.tags {
 		list-style: none;
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-xs) var(--space-sm); /* vertical and horizontal gap */
-		margin: 0; /* Collapse default margins */
+		gap: var(--space-xs) var(--space-sm); /* vertical and horizontal gap 
+		margin: 0; /* Collapse default margins 
 		padding: 0;
-	}
+	}*/
 
-	.tag {
+	/*.tag {
 		padding: 0.25rem 0.5rem;
 		background: var(--color-surface);
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius-sm);
 		font-size: var(--font-sm);
 		color: var(--text-secondary);
-		white-space: nowrap; /* Prevent tags themselves from wrapping mid-word */
-	}
+		white-space: nowrap; /* Prevent tags themselves from wrapping mid-word 
+	}*/
 
 	/* Related Section */
 	.related {

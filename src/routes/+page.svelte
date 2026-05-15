@@ -66,11 +66,11 @@
     </section> -->
 
     <!-- Quote Modal -->
-    <Modal
+    <!--<Modal
         bind:isOpen={showQuoteModal}
         {...$currentQuote}
         onClose={() => (showQuoteModal = false)}
-    />
+    />-->
 </div>
 
 
