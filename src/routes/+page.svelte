@@ -7,6 +7,8 @@
     import { currentQuote, setRandomQuote } from '$lib/stores/quoteStore.js';
     
     let showQuoteModal = false;
+    let message = " ";
+    let emailSubmit = false;
 
     /**
      * Select a few featured items — e.g., first 4 items
@@ -19,6 +21,15 @@
     function openQuoteModal() {
         setRandomQuote();
         showQuoteModal = true;
+    }
+
+    function handleSubmit() {
+        emailSubmit = true;
+    }
+
+    function sumbitted() {
+        /*alert("I'll get back to you soon!");*/
+        confirm("I'll get back to you soon!");
     }
 </script>
 
@@ -55,7 +66,20 @@
             {/each}
         </div>-->
 
-        <button class="contact-button">Contact me!</button>
+        <form class="contact-form" on:submit={handleSubmit}>
+            <h1>Get in touch:</h1>
+            <label for="user-email">your email address</label>
+            <input type="email" id="user-email" required
+                placeholder="name@email.com">
+
+            <label for="message">your message</label>
+            <textarea name="message" bind:value={message}></textarea>
+            <button class="contact-button" type="submit">Contact me!</button>
+        </form>
+
+        {#if emailSubmit}
+            <script>sumbitted();</script>
+        {/if}
 
         <a class="browse-link" href="{resolve('/design')}">Take a look at some of my work! →</a>
     </section>
@@ -96,8 +120,8 @@
     }
 
 	/* Ensure button styling doesn’t interfere */
-	.card-button {
-		all: unset; /* Remove default button styles */
+	/*.card-button {
+		all: unset; /* Remove default button styles 
 		cursor: pointer;
 		display: block;
 		text-align: inherit;
@@ -113,20 +137,40 @@
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: var(--space-lg);
         margin-bottom: var(--space-md);
+    }*/
+    
+    .contact-form {
+        color: var(--text-contrast);
+        background-color: var(--color-accent);
+        padding: 10px 40px;
+        width: 30%;
+        display: block;
+        margin: 0 auto;
+        margin-top: var(--space-xl);
+        border-radius: var(--radius-md);
     }
 
+    .contact-form h1 {
+        text-align: center;
+    }
+
+    .contact-form textarea {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    
     .contact-button {
         margin: 0 auto;
         display: block;
-        margin-top: var(--space-xl);
+        margin-top: var(--space-md);
         margin-bottom: var(--space-lg);
-        padding: var(--space-md) var(--space-lg);
-        background-color: var(--color-accent);
+        padding: var(--space-sm) var(--space-lg);
+        background-color: var(--color-primary);
         color: var(--text-contrast);
         text-decoration: none;
         border-radius: var(--radius-md);
         font-weight: 800;
-        font-size: var(--font-xl);
+        font-size: var(--font-base);
         transition: background-color var(--transition-fast), transform var(--transition-fast);
         box-shadow: var(--shadow-sm);
     }
@@ -151,6 +195,10 @@
     @media (max-width: 640px) {
         section {
             height: 700px;
+        }
+
+        .contact-form {
+            width: 90%;
         }
     }
 
