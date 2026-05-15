@@ -10,25 +10,13 @@
 	let sortBy = 'title';
 
 
-	function resetFilters() {
-		search = '';
-		selectedTag = 'all';
-		sortBy = 'title';
-	}
-
-
 	$: isFiltered = search || selectedTag !== 'all' || sortBy !== 'title';
 
 	// Reactive filtered + sorted catalogue
 	$: filteredCatalogue = $catalogue
-		.filter(item => {
-			const matchesTag = selectedTag === 'all' || item.tags?.includes(selectedTag);
-			const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase()) ||
-								  item.description.toLowerCase().includes(search.toLowerCase());
-			return matchesTag && matchesSearch;
-		})
+		.filter(item => item.category === 'art')
 		.sort((a, b) => {
-			if (sortBy === 'title') return a.title.localeCompare(b.title);
+			if (sortBy === 'id') return a.id.localeCompare(b.id);
 			if (sortBy === 'category') return a.category.localeCompare(b.category);
 			return 0;
 		});
@@ -39,49 +27,13 @@
 
 
 <svelte:head>
-    <title>Catalogue | Starter Kit</title>
+    <title>Other Art | Batter Bat</title>
 </svelte:head>
 
 
 <section class="catalogue-wrapper">
 	<div class="catalogue-heading-wrapper">
-		<h1 class="catalogue-heading">Catalogue</h1>
-	</div>
-
-	<div class="controls">
-		<label class="search-input">
-			<span role="img" aria-label="Search">🔍</span>
-			<input
-				type="text"
-				bind:value={search}
-				placeholder="Search..."
-				aria-label="Search catalogue"
-			/>
-		</label>
-
-		<label class="tag-select">
-			<span role="img" aria-label="Filter">🏷️</span>
-			<select bind:value={selectedTag} aria-label="Filter by tag">
-				<option value="all">All Tags</option>
-				{#each $tags as tag}
-					<option value={tag}>{tag}</option>
-				{/each}
-			</select>
-		</label>
-
-		<label class="sort-select">
-			<span role="img" aria-label="Sort">⇅</span>
-			<select bind:value={sortBy} aria-label="Sort by">
-				<option value="title">Sort by Title</option>
-				<option value="category">Sort by Category</option>
-			</select>
-		</label>
-
-		{#if isFiltered}
-			<button class="reset-button" on:click={resetFilters}>
-				✖ Reset
-			</button>
-		{/if}
+		<h1 class="catalogue-heading">Other Art</h1>
 	</div>
 
     <div class="grid" class:narrow={filteredCatalogue.length <= 2}>
@@ -90,7 +42,7 @@
                 <button
 					type="button"
 					class="card-button"
-					on:click={() => goto(resolve('/catalogue/[title]', { title: item.title }))}
+					on:click={() => goto(resolve('/art/[title]', { title: item.title }))}
 					aria-label={`View details for ${item.title}`}
 				>
                     <CatalogueCard
@@ -196,8 +148,9 @@
 
     .grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         justify-content: center;
+        align-items: flex-start;
 		gap: var(--space-lg);
         padding: 0 var(--space-lg);
         padding-bottom: 50px;
