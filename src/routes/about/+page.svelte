@@ -78,14 +78,20 @@
         animation: fadeIn 0.6s ease-in;
     }
 
-    section h1,
+    section h1 {
+        font-family: var(--font-heading);
+        font-size: var(--font-xxl);
+        margin-bottom: var(--space-sm);
+        text-align: center;
+        position: relative;
+    }
+
     section h2 {
         font-family: var(--font-heading);
         font-size: var(--font-xl);
         margin-bottom: var(--space-sm);
         text-align: center;
         position: relative;
-        text-shadow: 0px 0px 4px var(--text-contrast);
     }
 
     section h2::after {
@@ -200,8 +206,12 @@
         height: 4vh;
     }
 
-        section h1, section h2 {
-            font-size: var(--font-lg);
+        section h1 {
+            font-size: var(--font-xxl);
+        }
+
+        section h2 {
+            font-size: var(--font-xl);
         }
     }
 
