@@ -5,8 +5,8 @@
 
     const navigationItems = [
         { name: 'Home', path: '/' },
-        { name: 'Graphic & Print design', path: '/design/' },
-        { name: 'Programming & Assets', path: '/programming/' },
+        { name: 'Design', path: '/design/' },
+        { name: 'Programming', path: '/programming/' },
         { name: 'Other art', path: '/art/' },
         { name: 'About me', path: '/about/' }
     ];

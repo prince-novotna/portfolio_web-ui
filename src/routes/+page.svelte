@@ -34,7 +34,7 @@
     <!-- Featured Catalogue Section -->
     <section class="featured">
         <h2>Artist, designer, beginner programmer</h2>
-        <div class="card-grid">
+        <!--<div class="card-grid">
             {#each featuredItems as item, index}
                 <button
 					type="button"
@@ -53,11 +53,11 @@
                     />
                 </button>
             {/each}
-        </div>
+        </div>-->
 
         <button class="contact-button">Contact me!</button>
 
-        <a class="browse-link" href="{resolve('/catalogue')}">Browse Full Catalogue →</a>
+        <a class="browse-link" href="{resolve('/design')}">Take a look at some of my work! →</a>
     </section>
 
     <!-- About Teaser Section 
@@ -91,7 +91,8 @@
         text-align: center;
         font-family: var(--font-heading);
         font-size: var(--font-xl);
-        margin-bottom: var(--space-lg);
+        margin-bottom: var(--space-xl);
+        margin-top: var(--space-xl);
     }
 
 	/* Ensure button styling doesn’t interfere */
@@ -115,14 +116,17 @@
     }
 
     .contact-button {
-        margin-top: var(--space-md);
-        padding: var(--space-sm) var(--space-lg);
+        margin: 0 auto;
+        display: block;
+        margin-top: var(--space-xl);
+        margin-bottom: var(--space-lg);
+        padding: var(--space-md) var(--space-lg);
         background-color: var(--color-accent);
         color: var(--text-contrast);
         text-decoration: none;
         border-radius: var(--radius-md);
-        font-weight: 600;
-        font-size: var(--font-lg);
+        font-weight: 800;
+        font-size: var(--font-xl);
         transition: background-color var(--transition-fast), transform var(--transition-fast);
         box-shadow: var(--shadow-sm);
     }
@@ -130,7 +134,8 @@
     .browse-link {
         display: block;
         text-align: center;
-        margin-top: var(--space-md);
+        margin-top: var(--space-lg);
+        margin-bottom: var(--space-xl);
         font-weight: 500;
         text-decoration: none;
         color: var(--color-accent);
@@ -142,5 +147,11 @@
         padding: var(--space-lg) var(--space-md);
         background-color: var(--color-background);
     }*/
+
+    @media (max-width: 640px) {
+        section {
+            height: 700px;
+        }
+    }
 
 </style>
