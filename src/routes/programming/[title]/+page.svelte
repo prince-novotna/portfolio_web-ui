@@ -73,7 +73,7 @@
 					<button
 						type="button"
 						class="card-button"
-						on:click={() => goto(resolve('/catalogue/[title]', { title: item.title }))}
+						on:click={() => goto(resolve('/programming/[title]', { title: item.title }))}
 						aria-label={`View details for ${item.title}`}
 					>
 						<CatalogueCard

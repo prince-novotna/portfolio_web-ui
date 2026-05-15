@@ -40,7 +40,7 @@
 
 
 <svelte:head>
-    <title>Graphic & Print design</title>
+    <title>Graphic & Print design | Batter Bat</title>
 </svelte:head>
 
 
